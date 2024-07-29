@@ -1,3 +1,4 @@
+import { QueryClientProvider } from '@sparcs/api';
 import {
   createBrowserRouter,
   Navigate,
@@ -6,9 +7,8 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import { PATH } from '@/constants/routes.ts';
+import { PATH } from '@/constants/routes';
 import LandingPage from '@/pages/Landing';
-import { QueryClientProvider } from '@/QueryClientProvider.tsx';
 
 const publicRoutes = [
   {
