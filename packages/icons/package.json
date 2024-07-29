@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "@sparcs/eslint-config": "workspace:*",
-    "@sparcs/styles": "workspace:*",
     "@sparcs/typescript-config": "workspace:*",
     "@turbo/gen": "^1.13.4",
     "@types/eslint": "^8.56.11",

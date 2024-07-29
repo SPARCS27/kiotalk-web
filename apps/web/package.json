@@ -14,9 +14,7 @@
     "**/*.{ts,tsx}": "eslint --fix --max-warnings 0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.13.0",
-    "@emotion/styled": "^11.13.0",
+    "@sparcs/ui": "workspace:*",
     "@tanstack/react-query": "^5.51.15",
     "framer-motion": "^11.3.19",
     "react": "^18.3.1",
