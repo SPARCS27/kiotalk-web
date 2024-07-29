@@ -1,0 +1,40 @@
+# Node modules
+node_modules
+**/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages
+
+# Typescript compiled output
+dist
+build
+
+# Docker files
+Dockerfile
+Dockerfile.* 
+.dockerignore
+
+# Git
+.git
+.gitignore
+
+# IDEs and editors
+.idea
+.vscode
+*.swp
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Miscellaneous
+*.pem
+*.tmp
