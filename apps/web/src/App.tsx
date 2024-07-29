@@ -1,4 +1,5 @@
 import { QueryClientProvider } from '@sparcs/api';
+import { ChakraProvider } from '@sparcs/ui';
 import {
   createBrowserRouter,
   Navigate,
@@ -35,9 +36,11 @@ const router = createBrowserRouter([...publicRoutes]);
 
 const App = () => {
   return (
-    <QueryClientProvider>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <ChakraProvider>
+      <QueryClientProvider>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </ChakraProvider>
   );
 };
 

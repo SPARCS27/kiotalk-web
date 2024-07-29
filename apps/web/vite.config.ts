@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.oechul.com/',
+        target: 'https://api.sparcs27.jeongrae.me/',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, ''),
       },

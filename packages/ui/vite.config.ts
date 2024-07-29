@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: '@sparcs/api',
+      name: '@sparcs/ui',
       formats: ['es'],
       fileName: () => 'index.js',
     },
