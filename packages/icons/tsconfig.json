@@ -1,8 +1,4 @@
 {
-  "extends": "@sparcs/typescript-config/react-library.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
-  "include": ["src", "turbo"],
-  "exclude": ["node_modules", "dist"]
+  "extends": "@sparcs/typescript-config/vite-library.json",
+  "include": ["src", "vite.config.ts", "src/vite-env.d.ts"]
 }
