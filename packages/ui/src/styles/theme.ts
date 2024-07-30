@@ -72,16 +72,16 @@ const layerStyles = {
 const textStyles = {
   title: {
     color: colors.typography.normal,
-    fontSize: rem(64),
+    fontSize: rem(46),
     fontWeight: 'bold',
-    lineHeight: rem(48),
+    lineHeight: rem(62),
     textAlign: 'center',
   },
   subtitle: {
     color: colors.typography.sub,
-    fontSize: rem(36),
+    fontSize: rem(26),
     fontWeight: 'semibold',
-    lineHeight: rem(84),
+    lineHeight: rem(36),
     textAlign: 'center',
   },
 };
