@@ -1,15 +1,25 @@
 import { QueryClientProvider } from '@sparcs/api';
 import { ChakraProvider } from '@sparcs/ui';
-import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  Outlet,
+  RouterProvider,
+  ScrollRestoration,
+} from 'react-router-dom';
 
-import RouterLayout from '@/components/RouterLayout';
 import { PATH } from '@/constants/routes';
 import LandingPage from '@/pages/Landing';
 import OrderPage from '@/pages/Order';
 
 const publicRoutes = [
   {
-    element: <RouterLayout />,
+    element: (
+      <>
+        <ScrollRestoration />
+        <Outlet />
+      </>
+    ),
     children: [
       {
         path: PATH.INDEX,

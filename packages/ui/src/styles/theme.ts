@@ -28,7 +28,10 @@ const colors = {
   primary300: '#FFD3D0',
   primary600: '#B82D28',
 
+  gray100: '#F5F5F3',
+  gray300: '#D9D9D9',
   gray500: '#808080',
+  gray600: '#4D4D4D',
   gray700: '#3D3D3D',
   gray900: '#1F1F1F',
 };
