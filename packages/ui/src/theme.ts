@@ -1,4 +1,13 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+
+import { globalStyles } from './global';
+
+const fontFamily: string = `"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif`;
+
+const fonts = {
+  heading: fontFamily,
+  body: fontFamily,
+};
 
 const colors = {
   brand: {
@@ -8,4 +17,9 @@ const colors = {
   },
 };
 
-export const theme = extendTheme({ colors });
+const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
+};
+
+export const theme = extendTheme({ fonts, colors, config, styles: globalStyles });
