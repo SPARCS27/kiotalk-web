@@ -4,7 +4,7 @@ export const globalStyles = {
   global: () => ({
     body: {
       height: 'calc(var(--vh, 1vh) * 100)',
-      backgroundColor: theme.colors.gray[100],
+      backgroundColor: theme.colors.white,
     },
     '#root': {
       display: 'flex',
@@ -12,7 +12,7 @@ export const globalStyles = {
       width: 'calc(var(--vh, 1vh) * 100 * 9 / 16)',
       height: 'calc(var(--vh, 1vh) * 100)',
       marginInline: 'auto',
-      backgroundColor: theme.colors.white,
+      backgroundColor: theme.colors.background.normal,
     },
   }),
 };
