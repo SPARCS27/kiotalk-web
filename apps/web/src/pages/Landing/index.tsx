@@ -17,7 +17,8 @@ const LandingPage = () => {
 
         <Flex mt={rem(210)} mx="auto" gap={rem(28)}>
           <Box
-            as="button"
+            as="a"
+            href="/order"
             layerStyle="columnCenter"
             w={rem(330)}
             h={rem(330)}
@@ -31,13 +32,14 @@ const LandingPage = () => {
             </Text>
           </Box>
           <Box
-            as="button"
+            as="a"
+            href="/order"
             layerStyle="columnCenter"
             w={rem(330)}
             h={rem(330)}
             borderRadius={rem(34)}
             backgroundColor="white"
-            boxShadow="0px 4px 30px 0px rgba(0, 0, 0, 0.03)"
+            boxShadow={`0 ${rem(4)} ${rem(30)} 0 rgba(0, 0, 0, 0.03)`}
           >
             <Image src="/assets/img-landing-normal.png" alt="Voice" width={rem(128)} />
             <Text mt={rem(27)} color="gray700" fontSize={rem(28)} fontWeight="bold">
@@ -46,7 +48,7 @@ const LandingPage = () => {
           </Box>
         </Flex>
 
-        <Flex mt={rem(216)} gap={rem(24)}>
+        <Flex position="absolute" bottom={rem(142)} gap={rem(24)}>
           <Box
             as="button"
             layerStyle="center"
