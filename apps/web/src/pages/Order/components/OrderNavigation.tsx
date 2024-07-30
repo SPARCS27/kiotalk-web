@@ -1,5 +1,6 @@
-import { HomeIcon } from '@sparcs/icons';
 import { Box, Flex, rem } from '@sparcs/ui';
+
+import HomeIcon from '@/assets/icons/home.svg?react';
 
 const OrderNavigation = () => {
   return (

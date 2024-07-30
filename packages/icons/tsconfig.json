@@ -1,4 +1,0 @@
-{
-  "extends": "@sparcs/typescript-config/vite-library.json",
-  "include": ["src", "vite.config.ts", "src/vite-env.d.ts"]
-}
