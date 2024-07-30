@@ -1,7 +1,7 @@
 import { ChakraProvider as BaseChakraProvider, CSSReset } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
-import { theme } from './theme';
+import { theme } from './styles';
 
 type ChakraProviderProps = {
   children: ReactNode;

@@ -7,6 +7,9 @@ export default defineConfig({
   build: {
     outDir: './dist',
   },
+  esbuild: {
+    jsxInject: `import 'regenerator-runtime/runtime'`,
+  },
   server: {
     proxy: {
       '/api': {
