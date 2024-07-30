@@ -1,6 +1,6 @@
-export { rem } from './pxto';
-
 export { ChakraProvider } from './ChakraProvider';
-export { theme } from './theme';
 
-export { Text, Button } from '@chakra-ui/react';
+export { Text, Button, Box, Flex } from '@chakra-ui/react';
+
+export * from './utils';
+export * from './styles';

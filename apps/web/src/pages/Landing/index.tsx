@@ -1,12 +1,7 @@
-import { Text } from '@sparcs/ui';
 import { domAnimation, LazyMotion } from 'framer-motion';
 
 const LandingPage = () => {
-  return (
-    <LazyMotion features={domAnimation}>
-      <Text>Text</Text>
-    </LazyMotion>
-  );
+  return <LazyMotion features={domAnimation}></LazyMotion>;
 };
 
 export default LandingPage;
