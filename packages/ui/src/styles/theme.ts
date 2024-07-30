@@ -25,7 +25,12 @@ const colors = {
     normal: '#1F1F1F',
   },
 
-  branding: {},
+  primary300: '#FFD3D0',
+  primary600: '#B82D28',
+
+  gray500: '#808080',
+  gray700: '#3D3D3D',
+  gray900: '#1F1F1F',
 };
 
 const layerStyles = {
@@ -71,7 +76,7 @@ const layerStyles = {
 
 const textStyles = {
   title: {
-    color: colors.typography.normal,
+    color: 'gray900',
     fontSize: rem(46),
     fontWeight: 'bold',
     lineHeight: rem(62),
