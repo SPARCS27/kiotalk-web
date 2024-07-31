@@ -80,7 +80,7 @@ const VoiceOrderPage = () => {
 
                   setTimeout(() => {
                     navigate('/complete', { replace: true });
-                  }, 6000);
+                  }, 8000);
                 },
                 audio.duration * 1000 + 2000,
               );
