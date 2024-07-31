@@ -4,7 +4,7 @@ const path = require('node:path');
 module.exports = {
   root: true,
   extends: [
-    '@sparcs/eslint-config/base.js',
+    '@kiotalk/eslint-config/base.js',
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@tanstack/eslint-plugin-query/recommended',

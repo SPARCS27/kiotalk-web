@@ -1,8 +1,17 @@
-import { Box, Flex, rem } from '@sparcs/ui';
+import { Box, Flex, rem } from '@kiotalk/ui';
 
 import HomeIcon from '@/assets/icons/home.svg?react';
+import { ColorSchemeType } from '@/types/color.ts';
 
-const OrderNavigation = () => {
+type OrderNavigationProps = {
+  accentButtonTitle?: string;
+  colorScheme?: ColorSchemeType;
+};
+
+const OrderNavigation = ({
+  accentButtonTitle = '장바구니 확인하기',
+  colorScheme = 'YELLOW',
+}: OrderNavigationProps) => {
   return (
     <Flex as="nav" mt={rem(34)} gap={rem(24)}>
       <Box as="a" href="/" p={rem(26)} borderRadius={rem(22)} bgColor="gray600">
@@ -24,17 +33,17 @@ const OrderNavigation = () => {
       </Box>
       <Box
         as="a"
-        href="/"
+        href="/voice-pay"
         layerStyle="center"
         width={rem(350)}
         height={rem(100)}
-        color="white"
+        color={colorScheme === 'YELLOW' ? 'white' : '#4D4D4D'}
         fontSize={rem(28)}
         fontWeight="bold"
         borderRadius={rem(22)}
-        backgroundColor="primary600"
+        backgroundColor={colorScheme === 'YELLOW' ? 'primary600' : '#F6CA5C'}
       >
-        장바구니 확인하기
+        {accentButtonTitle}
       </Box>
     </Flex>
   );

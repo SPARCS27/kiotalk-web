@@ -1,4 +1,4 @@
 export const PATH = {
   INDEX: '/',
-  ORDER: '/order',
+  VOICE_ORDER: '/voice-order',
 } as const;

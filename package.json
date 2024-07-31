@@ -1,5 +1,5 @@
 {
-  "name": "oechul",
+  "name": "kiotalk",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -12,8 +12,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@sparcs/eslint-config": "workspace:*",
-    "@sparcs/typescript-config": "workspace:*",
+    "@kiotalk/eslint-config": "workspace:*",
+    "@kiotalk/typescript-config": "workspace:*",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.5",
     "prettier": "^3.2.5",

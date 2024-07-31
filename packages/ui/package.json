@@ -1,5 +1,5 @@
 {
-  "name": "@sparcs/ui",
+  "name": "@kiotalk/ui",
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@emotion/is-prop-valid": "^1.3.0",
-    "@sparcs/eslint-config": "workspace:*",
-    "@sparcs/typescript-config": "workspace:*",
+    "@kiotalk/eslint-config": "workspace:*",
+    "@kiotalk/typescript-config": "workspace:*",
     "@turbo/gen": "^1.13.4",
     "@types/eslint": "^8.56.11",
     "@types/node": "^20.14.13",

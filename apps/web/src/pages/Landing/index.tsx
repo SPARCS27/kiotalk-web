@@ -1,11 +1,11 @@
-import { Box, Flex, Image, rem, Text } from '@sparcs/ui';
+import { Box, Flex, Image, rem, Text } from '@kiotalk/ui';
 import { domAnimation, LazyMotion } from 'framer-motion';
 
 const LandingPage = () => {
   return (
     <LazyMotion features={domAnimation}>
       <Box as="section" layerStyle="columnCenterX" mt={rem(90)}>
-        <Image src="/assets/img-branding-mcdonald.png" alt="branding" height={rem(80)} />
+        <Image src="/assets/img-branding.png" alt="branding" height={rem(80)} />
         <Text textStyle="subtitle" mt={rem(30)}>
           대화로 주문하려면 대화 주문을,
           <br />
@@ -19,7 +19,7 @@ const LandingPage = () => {
       <Flex mt={rem(210)} mx="auto" gap={rem(28)}>
         <Box
           as="a"
-          href="/order"
+          href="/voice-order"
           layerStyle="columnCenter"
           w={rem(330)}
           h={rem(330)}

@@ -1,10 +1,8 @@
-import { theme } from './theme';
-
 export const globalStyles = {
   global: () => ({
     body: {
       height: '100dvh',
-      backgroundColor: theme.colors.background.normal,
+      backgroundColor: '#FBFBF9',
     },
     '#root': {
       display: 'flex',

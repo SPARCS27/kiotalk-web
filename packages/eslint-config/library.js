@@ -1,6 +1,6 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: ['@sparcs/eslint-config/base.js'],
+  extends: ['@kiotalk/eslint-config/base.js'],
   env: {
     node: true,
   },

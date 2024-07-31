@@ -1,5 +1,5 @@
 {
-  "extends": "@sparcs/typescript-config/react.json",
+  "extends": "@kiotalk/typescript-config/react.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

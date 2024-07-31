@@ -1,5 +1,6 @@
-import { QueryClientProvider } from '@sparcs/api';
-import { ChakraProvider } from '@sparcs/ui';
+import { QueryClientProvider } from '@kiotalk/api';
+import { ChakraProvider } from '@kiotalk/ui';
+import { useEffect } from 'react';
 import {
   createBrowserRouter,
   Navigate,
@@ -7,27 +8,54 @@ import {
   RouterProvider,
   ScrollRestoration,
 } from 'react-router-dom';
+import { RecoilRoot, useRecoilState, useSetRecoilState } from 'recoil';
 
+import { audioInstanceState, userInteractedState } from '@/atoms/audioState.ts';
 import { PATH } from '@/constants/routes';
 import LandingPage from '@/pages/Landing';
-import OrderPage from '@/pages/Order';
+import VoiceOrderPage from '@/pages/VoiceOrderPage';
+
+const RouterPage = () => {
+  const [userInteracted, setUserInteracted] = useRecoilState(userInteractedState);
+  const setAudioInstance = useSetRecoilState(audioInstanceState);
+
+  useEffect(() => {
+    const handleInteraction = () => {
+      if (!userInteracted) {
+        setUserInteracted(true);
+        const audio = new Audio();
+        setAudioInstance(audio);
+      }
+    };
+
+    window.addEventListener('click', handleInteraction);
+    window.addEventListener('keydown', handleInteraction);
+
+    return () => {
+      window.removeEventListener('click', handleInteraction);
+      window.removeEventListener('keydown', handleInteraction);
+    };
+  }, [userInteracted, setUserInteracted, setAudioInstance]);
+
+  return (
+    <>
+      <ScrollRestoration />
+      <Outlet />
+    </>
+  );
+};
 
 const publicRoutes = [
   {
-    element: (
-      <>
-        <ScrollRestoration />
-        <Outlet />
-      </>
-    ),
+    element: <RouterPage />,
     children: [
       {
         path: PATH.INDEX,
         element: <LandingPage />,
       },
       {
-        path: PATH.ORDER,
-        element: <OrderPage />,
+        path: PATH.VOICE_ORDER,
+        element: <VoiceOrderPage />,
       },
       {
         path: '*',
@@ -40,12 +68,12 @@ const publicRoutes = [
 const router = createBrowserRouter([...publicRoutes]);
 
 const App = () => {
-  // useScreenSize();
-
   return (
     <ChakraProvider>
       <QueryClientProvider>
-        <RouterProvider router={router} />
+        <RecoilRoot>
+          <RouterProvider router={router} />
+        </RecoilRoot>
       </QueryClientProvider>
     </ChakraProvider>
   );

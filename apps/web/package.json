@@ -14,7 +14,7 @@
     "**/*.{ts,tsx}": "eslint --fix --max-warnings 0"
   },
   "dependencies": {
-    "@sparcs/ui": "workspace:*",
+    "@kiotalk/ui": "workspace:*",
     "@tanstack/react-query": "^5.51.15",
     "framer-motion": "^11.3.19",
     "lottie-react": "^2.4.0",
@@ -23,12 +23,13 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-speech-recognition": "^3.10.0",
+    "recoil": "^0.7.7",
     "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
-    "@sparcs/api": "workspace:*",
-    "@sparcs/eslint-config": "workspace:*",
-    "@sparcs/typescript-config": "workspace:*",
+    "@kiotalk/api": "workspace:*",
+    "@kiotalk/eslint-config": "workspace:*",
+    "@kiotalk/typescript-config": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-speech-recognition": "^3.9.5",

@@ -26,10 +26,17 @@ export type MenuType = {
   purchase?: number;
 };
 
+export enum OrderStepType {
+  PAY = 'PAY',
+  ORDER = 'ORDER',
+  INITIAL = 'INITIAL',
+}
+
 export type OrderTaskType = {
   menus: MenuType[];
   pickupStrategy: OrderPickupStrategyEnum;
   totalPrice?: number;
+  step: OrderStepType;
 };
 
 export enum OrderRoleEnum {
@@ -42,9 +49,23 @@ export type OrderMessageType = {
   role: OrderRoleEnum;
 };
 
+export type RecommendMenuType = {
+  code: string;
+  ingredients: string[];
+  link: string;
+  name: string;
+  price: number;
+};
+
+export type RecommendType = {
+  comment: string;
+  menu: RecommendMenuType;
+};
+
 export type OrderResponse = {
-  cart: { task: OrderTaskType };
+  cart?: { task: OrderTaskType };
   history: OrderMessageType[];
   message: OrderMessageType;
+  recommend?: RecommendType;
   result: boolean;
 };

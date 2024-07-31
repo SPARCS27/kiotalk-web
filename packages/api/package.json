@@ -1,5 +1,5 @@
 {
-  "name": "@sparcs/api",
+  "name": "@kiotalk/api",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -15,8 +15,8 @@
     "axios": "^1.7.2"
   },
   "devDependencies": {
-    "@sparcs/eslint-config": "workspace:*",
-    "@sparcs/typescript-config": "workspace:*",
+    "@kiotalk/eslint-config": "workspace:*",
+    "@kiotalk/typescript-config": "workspace:*",
     "@types/node": "^20.14.13",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

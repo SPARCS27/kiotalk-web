@@ -2,7 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 const useSpeechTimeout = (timeoutDuration: number, onSuccessComplete: () => void) => {
-  const { transcript, listening, finalTranscript, resetTranscript } = useSpeechRecognition();
+  const {
+    transcript,
+    listening,
+    finalTranscript,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   const clearListeningTimeout = useCallback(() => {
@@ -23,7 +29,7 @@ const useSpeechTimeout = (timeoutDuration: number, onSuccessComplete: () => void
   const handleVoice = async () => {
     if (listening) {
       clearListeningTimeout();
-      await SpeechRecognition.stopListening();
+      await SpeechRecognition.abortListening();
     } else {
       await SpeechRecognition.startListening({ language: 'ko', continuous: true });
     }
@@ -40,7 +46,8 @@ const useSpeechTimeout = (timeoutDuration: number, onSuccessComplete: () => void
 
   useEffect(() => {
     if (!listening && finalTranscript) onSuccessComplete();
-  }, [finalTranscript, listening, onSuccessComplete]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [finalTranscript, listening]);
 
   useEffect(() => {
     return () => clearListeningTimeout();
@@ -53,6 +60,7 @@ const useSpeechTimeout = (timeoutDuration: number, onSuccessComplete: () => void
     finalTranscript: transcript,
     handleVoice,
     resetTranscript,
+    browserSupportsSpeechRecognition,
   };
 };
 

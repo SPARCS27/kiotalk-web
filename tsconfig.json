@@ -2,5 +2,5 @@
   "compilerOptions": {
       "jsx": "react"
   },
-  "extends": "@sparcs/typescript-config/base.json"
+  "extends": "@kiotalk/typescript-config/base.json"
 }
