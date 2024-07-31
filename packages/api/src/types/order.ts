@@ -30,6 +30,8 @@ export enum OrderStepType {
   PAY = 'PAY',
   ORDER = 'ORDER',
   INITIAL = 'INITIAL',
+  CARD = 'CARD',
+  COMPLETE = 'COMPLETE',
 }
 
 export type OrderTaskType = {

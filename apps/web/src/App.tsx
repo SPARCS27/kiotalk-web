@@ -12,6 +12,7 @@ import { RecoilRoot, useRecoilState, useSetRecoilState } from 'recoil';
 
 import { audioInstanceState, userInteractedState } from '@/atoms/audioState.ts';
 import { PATH } from '@/constants/routes';
+import CompletePage from '@/pages/CompletePage';
 import LandingPage from '@/pages/Landing';
 import VoiceOrderPage from '@/pages/VoiceOrderPage';
 
@@ -56,6 +57,10 @@ const publicRoutes = [
       {
         path: PATH.VOICE_ORDER,
         element: <VoiceOrderPage />,
+      },
+      {
+        path: PATH.COMPLETE,
+        element: <CompletePage />,
       },
       {
         path: '*',
