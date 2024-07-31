@@ -13,10 +13,38 @@ export enum MenuDrinkEnum {
   CC = '콜라',
 }
 
+export enum OrderPickupStrategyEnum {
+  TAKEOUT = '포장하기',
+  DINE_IN = '먹고가기',
+}
+
 export type MenuType = {
   name: MenuNameEnum;
   isCombo: boolean;
   size: MenuSizeEnum;
-  drink: string;
-  purchase: number;
+  drink: MenuDrinkEnum;
+  purchase?: number;
+};
+
+export type OrderTaskType = {
+  menus: MenuType[];
+  pickupStrategy: OrderPickupStrategyEnum;
+  totalPrice?: number;
+};
+
+export enum OrderRoleEnum {
+  user = 'user',
+  assistant = 'assistant',
+}
+
+export type OrderMessageType = {
+  content: string;
+  role: OrderRoleEnum;
+};
+
+export type OrderResponse = {
+  cart: { task: OrderTaskType };
+  history: OrderMessageType[];
+  message: OrderMessageType;
+  result: boolean;
 };
