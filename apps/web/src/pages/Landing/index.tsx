@@ -61,7 +61,7 @@ const LandingPage = () => {
             borderRadius="50%"
             backgroundColor="primary300"
           >
-            <Image src="/assets/img-flag-korean.png" alt="Korean" width={rem(40)} />
+            <Image src="/assets/img-flag-korean.png" alt="Korean" width={rem(68)} />
           </Box>
           <Box
             as="button"
@@ -71,7 +71,7 @@ const LandingPage = () => {
             borderRadius="50%"
             backgroundColor="#FAECCA"
           >
-            <Image src="/assets/img-flag-english.png" alt="English" width={rem(40)} />
+            <Image src="/assets/img-flag-english.png" alt="English" width={rem(68)} />
           </Box>
         </Flex>
       </Flex>

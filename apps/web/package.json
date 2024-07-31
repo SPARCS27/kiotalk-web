@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 8080 --host 0.0.0.0",
+    "dev": "vite --port 80 --host 0.0.0.0",
     "build": "vite build",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview"
@@ -17,7 +17,9 @@
     "@sparcs/ui": "workspace:*",
     "@tanstack/react-query": "^5.51.15",
     "framer-motion": "^11.3.19",
+    "lottie-react": "^2.4.0",
     "react": "^18.3.1",
+    "react-audio-player": "^0.17.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-speech-recognition": "^3.10.0",
